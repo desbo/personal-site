@@ -1,0 +1,72 @@
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #FF3366;
+}
+
+#title {
+    font-size: 34px;
+    font-family: 'Old Standard TT';
+}
+
+#title a {
+    text-decoration: none;
+}
+.main { 
+    font-family:  'Source Sans Pro';
+    font-size: 15px;
+}
+
+h2 {
+    font: 22px 'Old Standard TT';
+}
+
+.nav li {
+    float: left;
+}
+
+#content a {
+    text-decoration: underline;
+}
+
+li.active a {
+    /*color: #FF3366;*/
+}
+
+.nav>li>a:hover {
+    background: none;
+}
+#content {
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    #content {
+        margin-top: 6px;
+    }
+
+    #content h2 {
+        margin-top: 0;
+    }
+
+    #title {
+        margin-bottom: 60px;
+    }
+
+    .main {
+        padding-top: 60px;
+    }
+
+    .nav li {
+        clear: both;
+    }
+}

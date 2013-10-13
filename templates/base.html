@@ -1,19 +1,43 @@
+{% set nav = [
+    ('blog', 'Blog'),
+    ('work', 'Work'),
+    ('contact', 'Contact')
+] -%}
+{% set current_page = current_page|default('home') -%}
+
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Old+Standard+TT:400,700|Raleway+Dots|Raleway|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} — Sam Desborough</title>
     {% endblock %}
 </head>
-<body>
-    <h1><a href="{{ url_for('home') }}">Sam Desborough</a></h1>
 
-    {% include 'nav.html' %}
-    <div id="main">
-        <h2>{{ self.title() }}</h2>
-        {% block section_content %}
-        {% endblock %}
+<body>
+    <div class="main container">
+        <header class="row">
+            <h1 id="title" class="col-md-5"><a href="{{ url_for('home') }}">SAM DESBOROUGH</a></h1>
+            <h2 class="col-md-4">{{ self.title() }}</h2>
+        </header>
+
+        <div class="row">
+            <ul class="nav col-md-3">
+                {% for name, title in nav %}
+                <li{% if name == current_page %} class="active"{% endif %}><a href="{{ url_for('show', template=name) }}">{{ title }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="col-md-6" id="content">
+                {% if self.title() %}
+                    <!-- <h2>{{ self.title() }}</h2> -->
+                {% endif %}
+                {% block section_content %}{% endblock %}
+            </div>
+        </div>
     </div>
 </body>
 </html>
