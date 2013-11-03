@@ -91,8 +91,8 @@ h3 {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -110px;
-    padding: 0 0 110px
+    margin: 0 auto -135px;
+    padding: 0 0 135px
 }
 
 #main {
@@ -100,7 +100,15 @@ h3 {
 }
 
 .project img {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+}
+
+.project h2 {
+    white-space: nowrap;
+}
+
+.project a > p {
+    font-size: 12px;
 }
 
 footer {
