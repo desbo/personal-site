@@ -1,72 +1,122 @@
+@import url('cube.css');
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding-top: 80px;
+    font-family: 'Lato';
+    font-size: 14px;
+    color: #444;
+}
+
+.navbar-default {
+    background: white;
+    padding: 22px 0;
+    border-color: #bbb;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a,
 a {
-    color: #333;
+    color: #555;
 }
 
-a:hover {
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>li>a:hover, 
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-brand:hover, 
+a:hover
+{    
     text-decoration: none;
-    color: #FF3366;
-}
-
-#title {
-    font-size: 34px;
-    font-family: 'Old Standard TT';
+    background: none;
+    color: #4ECDC4;
 }
 
 #title a {
     text-decoration: none;
 }
-.main { 
-    font-family:  'Source Sans Pro';
-    font-size: 15px;
+
+h1, h2, h3, .navbar-brand, .nav>li {
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
 }
 
-h2 {
-    font: 22px 'Old Standard TT';
+.navbar-brand, .nav>li {
+    font-weight: normal;
 }
 
-.nav li {
-    float: left;
+.navbar-brand {
+    font-size: 32px;
 }
 
-#content a {
-    text-decoration: underline;
+h1 {
+    font-size: 22px;
 }
 
-li.active a {
-    /*color: #FF3366;*/
+h2, .nav > li  {
+    font-size: 18px;
+}
+
+h3 { 
+    font-size: 16px;
 }
 
 .nav>li>a:hover {
     background: none;
 }
+
 #content {
     margin-top: 40px;
 }
 
-@media (min-width: 768px) {
-    .main {
-        padding-top: 40px;
-    }
+#content p:first-child {
+    margin-top: 20px;
 }
 
-@media (min-width: 992px) {
-    #content {
-        margin-top: 6px;
-    }
+#content a {
+    text-decoration: none;
+    border-bottom: 1px solid #bbb;
+}
 
-    #content h2 {
-        margin-top: 0;
-    }
+#content a > p {
+    display: inline-block;
+}
 
-    #title {
-        margin-bottom: 60px;
-    }
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -110px;
+    padding: 0 0 110px
+}
 
-    .main {
-        padding-top: 60px;
-    }
+#main {
+    margin-bottom: 40px;
+}
 
-    .nav li {
-        clear: both;
-    }
+.project img {
+    margin-bottom: 5px;
+}
+
+footer {
+    background: #556270;
+}
+
+footer .container {
+    padding: 40px 10px;
+}
+
+footer li a {
+    color: #bbb;
+}
+
+footer p {
+    font-size: 11px;
+    padding-left: 5px;
+    color: #A2A2A2;
 }
