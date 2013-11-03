@@ -101,8 +101,8 @@ h3 {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -135px;
-    padding: 0 0 135px
+    margin: 0 auto -115px;
+    padding: 0 0 115px
 }
 
 #main {
@@ -131,10 +131,11 @@ footer {
 }
 
 footer .container {
-    padding: 40px 10px;
+    padding: 30px 10px;
 }
 
 footer li a {
+    font-size: 18px;
     color: #bbb;
 }
 
