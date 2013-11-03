@@ -29,7 +29,7 @@
                 {% endwith %}
 
                 <div class="row" id="content">
-                    <div class="col-xs-{{ content_cols|default('7') }}">
+                    <div class="col-sm-{{ content_cols|default('8') }}">
                     {% if self.title() and current_page != 'home' %}
                         <h1>{{ self.title() }}</h1>
                     {% endif %}
