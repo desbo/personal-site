@@ -8,6 +8,7 @@
             {% for name, title in nav %}
             <li{% if name == current_page %} class="active"{% endif %}><a href="{{ url_for('show', template=name) }}">{{ title }}</a></li>
             {% endfor %}
+            <li><a href="{{ url_for('static', filename='img/CV.pdf') }}">CV</a></li>
             {% if session.get('logged_in') == True %}
             <li{% if current_page == 'post' %} class="active"{% endif %}><a href="{{ url_for('post') }}">New post</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
