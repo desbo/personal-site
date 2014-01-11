@@ -10,7 +10,6 @@ itsdangerous==0.23
 numpy==1.4.1
 psycopg2==2.2.1
 pyserial==2.3
-python-apt==0.7.100.1-squeeze1
 reportbug==4.12.6
 virtualenv==1.4.9
 web.py==0.34
