@@ -4,9 +4,11 @@ from flask import Flask, request, session, g, render_template, url_for, \
     abort, flash, redirect, Markup
 from jinja2.exceptions import TemplateNotFound
 from datetime import datetime
+from werkzeug.contrib.fixers import ProxyFix
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
 #this is overkill and should just be done in the template.
