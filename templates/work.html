@@ -6,41 +6,14 @@
 {% block title %}Selected Work{% endblock %}
 
 {% block section_content %}
-<div class="project col-xs-12 col-sm-4">
-    <h2>Kurt Geiger</h2>
-    <a href="http://www.kurtgeiger.com" target="_blank">
-        <img class="img-responsive" src="{{ url_for('static', filename='img/work/kurt-geiger.png') }}">
-        <p>http://www.kurtgeiger.com</p>
-    </a>
-    <p>In-house developer. Built Amazon MWS integration.</p>
-</div>
-
-<div class="project col-xs-12 col-sm-4">
-    <h2>Belly Kids</h2>
-    <a href="http://www.bellykids.co.uk" target="_blank">
-        <img class="img-responsive" src="{{ url_for('static', filename='img/work/belly-kids.png') }}">
-        <p>http://www.bellykids.co.uk</p>
-    </a>
-    <p>A Wordpress theme for an independent publisher.</p>
-</div>
-
-<div class="project col-xs-12 col-sm-4">
-    <h2>Samrai Associates</h2>
-    
-    <a href="http://www.samrai-associates.co.uk" target="_blank">
-        <img class="img-responsive" src="{{ url_for('static', filename='img/work/samrai-associates.png') }}">
-        <p>http://www.samrai-associates.co.uk</p>
-    </a>
-    <p>A responsive Drupal theme for an architectural design company.</p>
-</div>
-
-<div class="project col-xs-12 col-sm-4">
-    <h2>Clanger</h2>
-    
-    <a href="http://www.youclang.co.uk" target="_blank">
-        <img class="img-responsive" src="{{ url_for('static', filename='img/work/clanger.png') }}">
-        <p>http://www.youclang.co.uk</p>
-    </a>
-    <p>An experimental DJ tool for YouTube videos.</p>
-</div>
+    {% for project in projects %}
+    <div class="project col-xs-12 col-sm-4">
+        <h2>{{ project.name }}</h2>
+        <a href="{{ project.url }}" target="_blank">
+            <img class="img-responsive" src="{{ url_for('static', filename='img/work/%s' % project.image) }}">
+            <p>{{ project.url }}</p>
+        </a>
+        <p>{{ project.info }}</p>
+    </div>
+    {% endfor %}
 {% endblock %}

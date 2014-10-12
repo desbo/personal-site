@@ -1,5 +1,6 @@
 import os.path
-from sqlite3 import dbapi2 as sqlite3
+import sys
+import json
 from flask import Flask, request, session, g, render_template, url_for, \
     abort, flash, redirect, Markup
 from jinja2.exceptions import TemplateNotFound
@@ -7,27 +8,18 @@ from datetime import datetime
 from werkzeug.contrib.fixers import ProxyFix
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
 app.wsgi_app = ProxyFix(app.wsgi_app)
-
-
-#this is overkill and should just be done in the template.
-@app.context_processor
-def set_nav():
-    nav = [
-    ('work', 'Work'),
-    ('contact', 'Contact')
-    ]
-
-    if (app.config['BLOG_ENABLED']):
-        nav.insert(0, ('blog', 'Blog'))
-
-    return dict(nav=nav)
 
 
 @app.route('/')
 def home():
     return render_template('home.html')
+
+
+@app.route('/work')
+def work():
+    projects = json.load(open('data/projects.json'))['projects']
+    return render_template('work.html', projects=projects)
 
 
 @app.route('/<path:template>')
