@@ -160,6 +160,7 @@ footer p {
 
     .project {
         margin-bottom: 0px;
+        min-height: 360px;
     }
 
     .project-img {
