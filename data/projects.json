@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "name": "Dalton Maag",
+      "image": "dalton-maag.png",
+      "url": "https://www.daltonmaag.com",
+      "info": "Lead web developer. Company website built with AngularJS, including a custom-made shopping cart and CMS."
+    },
+    {
+      "name": "Kurt Geiger",
+      "image": "kurt-geiger.png",
+      "url": "http://www.kurtgeiger.com",
+      "info": "In-house developer. Built Amazon MWS integration."
+    },
+    {
+      "name": "Belly Kids",
+      "image": "belly-kids.png",
+      "url": "http://www.bellykids.co.uk",
+      "info": "Custom Wordpress theme for an independent publisher."
+    },
+    {
+      "name": "Samrai Associates",
+      "image": "samrai-associates.png",
+      "url": "http://www.samrai-associates.co.uk",
+      "info": "Custom responsive Drupal theme for an architectural design company."
+    },
+    {
+      "name": "Clanger",
+      "image": "clanger.png",
+      "url": "http://www.youclang.co.uk",
+      "info": "An experimental DJ tool for YouTube videos."
+    }
+  ]
+}
