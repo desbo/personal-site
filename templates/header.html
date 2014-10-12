@@ -5,13 +5,8 @@
         </div>
 
         <ul class="navbar-nav navbar-right nav">
-            {% for name, title in nav %}
-            <li{% if name == current_page %} class="active"{% endif %}><a href="{{ url_for('show', template=name) }}">{{ title }}</a></li>
-            {% endfor %}
-            {% if session.get('logged_in') == True %}
-            <li{% if current_page == 'post' %} class="active"{% endif %}><a href="{{ url_for('post') }}">New post</a></li>
-            <li><a href="{{ url_for('logout') }}">Log out</a></li>
-            {% endif %}
+            <li{% if current_page == "work" %} class="active"{% endif %}><a href="{{ url_for('show', template='work') }}">Work</a></li>
+            <li{% if current_page == "contact" %} class="active"{% endif %}><a href="{{ url_for('show', template='contact') }}">Contact</a></li>
         </ul>
     </div>
 </header>
