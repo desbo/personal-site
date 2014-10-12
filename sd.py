@@ -37,7 +37,8 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    set_nav()
-
-    app.debug = app.config['DEBUG']
+    try:
+        app.debug = sys.argv[1] == "debug"
+    except IndexError:
+        pass
     app.run()
