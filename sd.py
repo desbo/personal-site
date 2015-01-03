@@ -1,14 +1,19 @@
 import os.path
 import sys
 import json
+import datetime
 from flask import Flask, request, session, g, render_template, url_for, \
     abort, flash, redirect, Markup
 from jinja2.exceptions import TemplateNotFound
-from datetime import datetime
 from werkzeug.contrib.fixers import ProxyFix
 
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
+
+
+@app.context_processor
+def inject_year():
+    return dict(year=datetime.date.today().year)
 
 
 @app.route('/')
@@ -35,6 +40,7 @@ def show(template):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
 
 if __name__ == '__main__':
     try:
