@@ -6,8 +6,10 @@ from flask import Flask, request, session, g, render_template, url_for, \
     abort, flash, redirect, Markup
 from jinja2.exceptions import TemplateNotFound
 from werkzeug.contrib.fixers import ProxyFix
+from flask.ext.frozen import Freezer
 
 app = Flask(__name__)
+freezer = Freezer(app)
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
@@ -47,4 +49,5 @@ if __name__ == '__main__':
         app.debug = sys.argv[1] == "debug"
     except IndexError:
         pass
+    freezer.freeze()
     app.run()
