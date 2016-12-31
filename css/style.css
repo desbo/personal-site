@@ -163,7 +163,8 @@ footer p {
         min-height: 360px;
     }
 
-    .project-img {
+    .project img {
         max-width: 260px;
+        height: 200px;
     }
 }

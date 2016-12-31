@@ -9,11 +9,12 @@
 title: "Sam Desborough"
 email: sam.desborough@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A London-based full-stack developer.
+  Full-stack engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://samdesborough.net" # the base hostname & protocol for your site
 twitter_username: samdesborough
-github_username:  desbo
+github_username: desbo
 
 # Build settings
 markdown: kramdown
+permalink: pretty

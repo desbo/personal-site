@@ -5,6 +5,12 @@ columns: 12
 ---
 
 {% for project in site.data.projects %}
+  {% assign idx = forloop.index | modulo: 3 %}
+
+  {% if idx == 1 %}
+  <div class="row">
+  {% endif %}  
+
   <div class="project col-xs-12 col-sm-4">
     <h2>{{ project.name }}</h2>
     <a href="{{ project.url }}" target="_blank">
@@ -13,4 +19,9 @@ columns: 12
     </a>
     <p>{{ project.text }}</p>
   </div>
+  
+  {% if idx == 0 %}
+  </div>
+  {% endif %}  
+
 {% endfor %}

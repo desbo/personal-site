@@ -1,7 +1,7 @@
 - name: The Guardian
   url: https://www.theguardian.com
   image: the-guardian.png
-  text: Software engineer. Various projects written in Scala and JavaScript. Platform work in AWS.
+  text: Senior software developer. Various projects written in Scala and JavaScript, and infrastructure work in AWS.
 
 - name: Dalton Maag
   url: https://www.daltonmaag.com
@@ -11,7 +11,7 @@
 - name: Kurt Geiger
   url: http://www.kurtgeiger.com
   image: kurt-geiger.png
-  text: In-house developer. Built Amazon MWS integration.
+  text: In-house developer. Built Amazon Marketplace integration.
 
 - name: Samrai Associates
   image: samrai-associates.png
