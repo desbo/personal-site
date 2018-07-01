@@ -14,6 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://samdesborough.net" # the base hostname & protocol for your site
 twitter_username: samdesborough
 github_username: desbo
+exclude: [s3_website.yml, Makefile]
 
 # Build settings
 markdown: kramdown
