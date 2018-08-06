@@ -18,4 +18,4 @@ exclude: [s3_website.yml, Makefile]
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:title/

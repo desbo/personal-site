@@ -4,6 +4,6 @@ title: Home
 hide_title: true
 ---
 
-I'm a full-stack engineer currently working at The Guardian, writing mainly Scala and JavaScript.
+A full-stack engineer currently working at The Guardian, writing Scala and JavaScript.
 
-You can see some examples of my work [here](/work).
+Feel free to [send me an email](mailto:sam.desborough@gmail.com) or [download my CV](/img/CV.pdf).
