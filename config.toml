@@ -1,0 +1,7 @@
+baseURL = "https://samdesborough.net/"
+languageCode = "en-gb"
+title = "Sam Desborough"
+theme = "samdesborough.net"
+
+[params]
+description = "A software engineer based in London, UK"
