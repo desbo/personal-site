@@ -13,9 +13,9 @@ article {
 }
 
 a, a:visited {
-  color: #0000ff;
+  color: blue;
 }
 
 a:hover {
-  color: #ff00ff;
+  color: fuchsia;
 }
